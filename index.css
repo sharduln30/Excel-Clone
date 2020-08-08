@@ -1,0 +1,246 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #FAFAFA;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    /* border: 3px solid black; */
+}
+
+#menu-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(247deg, #8EC5FC 0%, #E0C3FC 100%);
+    height: 33px;
+}
+
+.utilButton {
+    padding: 10px 25px 10px 25px;
+    font-size: small;
+    border-radius: 15px;
+    margin: 4px 5px 4px 5px;
+    border-color: transparent;
+}
+
+.utilButton:hover {
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    transform: scale(1.1);
+    color: white;
+}
+.utilButton.fas:hover {
+    color: white;
+}
+
+#menu-bar > div {
+    padding: 9px 11px 24px 11px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 12px;
+    border-radius: 9px;
+}
+#menu-bar > div:hover, #menu-bar > div.selected {
+    background-color: #8EC5FC;
+    font-weight: bold;
+    color: black;
+}
+
+#menu-content-container {
+    display: flex;
+    flex-direction: row;
+    height:80px;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-group {
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid lightgrey;
+    border-radius: 2px;
+    padding: 7px;
+    align-items: center;
+}
+
+.menu-row {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+}
+
+.menu-row > * {
+    margin: 0px 5px;
+    cursor: pointer;
+    border: 0.5px solid lightgrey;
+    border-radius: 15px;
+    height: 28px;
+}
+
+.menu-row > input {
+    width: 26px;
+}
+
+.menu-row >input:hover {
+    transform: scale(1.2);
+}
+
+#font-family {
+    width: 115px;
+    font-size: 13px;
+    text-align-last: left;
+}
+
+#font-size {
+    width: 40px;
+    font-size: 13px;
+    text-align-last: center;
+}
+
+#bold.selected, #italic.selected, #underline.selected, 
+#alignment-menu-container input.selected {
+    background-color: #8EC5FC;
+    color: white;
+}
+
+#formula-bar {
+    display: flex;
+    flex-direction: row;
+ 
+   
+    height: 30px;
+}
+#formula-bar >#cellFormula {
+
+    flex: 3%;
+}
+
+#formula-bar >#seperator {
+    flex: 1%;
+    padding: 5px 7px 1px 29px;
+    color: #ececec;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+}
+
+#formula-bar>#txtFormula{
+    flex: 96%;
+}
+
+#content-container {
+    position: relative;
+    height: 751px;
+    overflow: auto;
+    height: calc(100vh - 168px);
+}
+
+#tl-cell {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 25px;
+    width: 25px;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    z-index:3;
+}
+
+#first-row {
+    position: absolute;
+    left: 25px;
+    height: 25px;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(180deg, #8EC5FC 0%, #E0C3FC 100%);
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+
+#first-col {
+    position: absolute;
+    top: 25px;
+    height: 25px;
+    background-color: #99D6E8;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+#grid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+
+    display: flex;
+    flex-direction: row;   
+}
+
+.cell {
+    width: 70px;
+    border: 0.2px solid #DADCDD;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: cell;
+    font-size: 15px;
+    line-height: 25px;
+    border-radius: 3px;
+}
+.cell.selected {
+    border: 0.5px solid #6f0ffd;
+}
+
+#first-col .cell {
+    text-align: center;
+    width: 25px;
+    background-color: #8EC5FC;
+}
+
+#first-row .cell {
+    text-align: center;
+    font-size: medium;
+}
+
+#sheets-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(247deg, #8EC5FC 0%, #E0C3FC 100%);
+    height: 24px;
+}
+#sheets-bar > div{
+    padding:6px;
+    border-right: 1px solid black;
+    font-size: 12px;
+    cursor: pointer;
+}
+#sheets-bar > div:hover{
+    background-color: #8EC5FC;
+    font-weight: bold;
+    color: white;
+}
+#sheets-bar #add {
+    width: 18px;
+    text-align: center;
+}
