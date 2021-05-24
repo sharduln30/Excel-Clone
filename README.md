@@ -1,4 +1,7 @@
 # Excel-Clone
+
+![Sample of Excel](https://user-images.githubusercontent.com/38531301/119415929-328a8f80-bd10-11eb-9818-5485b72be6af.PNG)
+
 Clone of excel using electron and JS
 To check out the project-  
 
